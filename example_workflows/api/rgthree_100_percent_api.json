@@ -68,6 +68,10 @@
   },
   "6": {
     "inputs": {
+      "clip": [
+        "10",
+        2
+      ],
       "vae": [
         "10",
         3
@@ -119,6 +123,10 @@
   },
   "10": {
     "inputs": {
+      "clip": [
+        "11",
+        2
+      ],
       "vae": [
         "11",
         3
@@ -135,6 +143,10 @@
   },
   "11": {
     "inputs": {
+      "clip": [
+        "46",
+        1
+      ],
       "vae": [
         "46",
         2
@@ -418,12 +430,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_gucym_00015_.png&type=temp&subfolder=&rand=0.41714313880986253"
+            "url": "/api/view?filename=rgthree.compare._temp_pyspl_00001_.png&type=temp&subfolder=&rand=0.17929112183346807"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_gucym_00016_.png&type=temp&subfolder=&rand=0.44082808202716883"
+            "url": "/api/view?filename=rgthree.compare._temp_pyspl_00002_.png&type=temp&subfolder=&rand=0.1429283987061527"
           }
         ]
       },
@@ -512,11 +524,11 @@
       "lora_04": "None",
       "strength_04": 1,
       "model": [
-        "46",
+        "75",
         0
       ],
       "clip": [
-        "46",
+        "75",
         1
       ]
     },
@@ -733,12 +745,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_ttydc_00015_.png&type=temp&subfolder=&rand=0.8458330737066441"
+            "url": "/api/view?filename=rgthree.compare._temp_qackl_00001_.png&type=temp&subfolder=&rand=0.8199895412227102"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_ttydc_00016_.png&type=temp&subfolder=&rand=0.1079619905937852"
+            "url": "/api/view?filename=rgthree.compare._temp_qackl_00002_.png&type=temp&subfolder=&rand=0.15705046858907945"
           }
         ]
       },
@@ -754,6 +766,31 @@
     "class_type": "Image Comparer (rgthree)",
     "_meta": {
       "title": "Image Comparer (rgthree)"
+    }
+  },
+  "75": {
+    "inputs": {
+      "PowerLoraLoaderHeaderWidget": {
+        "type": "PowerLoraLoaderHeaderWidget"
+      },
+      "lora_1": {
+        "on": true,
+        "lora": "JuggerCineXL2.safetensors",
+        "strength": 1
+      },
+      "\u2795 Add Lora": "",
+      "model": [
+        "46",
+        0
+      ],
+      "clip": [
+        "46",
+        1
+      ]
+    },
+    "class_type": "Power Lora Loader (rgthree)",
+    "_meta": {
+      "title": "Power Lora Loader (rgthree)"
     }
   }
 }
