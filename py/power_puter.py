@@ -27,8 +27,6 @@ from .log import log_node_error, log_node_warn, log_node_info
 
 from .power_lora_loader import RgthreePowerLoraLoader
 
-from nodes import ImageBatch
-from comfy_extras.nodes_latent import LatentBatch
 
 
 class LoopBreak(Exception):
@@ -83,6 +81,8 @@ def batch(*args):
   args = list(args)
   result = args.pop(0)
   is_latent = check_is_latent(result)
+  from comfy_extras.nodes_latent import LatentBatch
+  from nodes import ImageBatch
   node = LatentBatch() if is_latent else ImageBatch()
 
   for arg in args:
@@ -329,7 +329,7 @@ class RgthreePowerPuter:
     """Does the nodes' work."""
     code = kwargs['code']
     unique_id = kwargs['unique_id']
-    pnginfo = kwargs['extra_pnginfo']
+    pnginfo = kwargs.get("extra_pnginfo") or {}
     workflow = pnginfo["workflow"] if "workflow" in pnginfo else {"nodes": []}
     prompt = kwargs['prompt']
     dynprompt = kwargs['dynprompt']

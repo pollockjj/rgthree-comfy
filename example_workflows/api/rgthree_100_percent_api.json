@@ -524,11 +524,11 @@
       "lora_04": "None",
       "strength_04": 1,
       "model": [
-        "75",
+        "46",
         0
       ],
       "clip": [
-        "75",
+        "46",
         1
       ]
     },
@@ -766,31 +766,6 @@
     "class_type": "Image Comparer (rgthree)",
     "_meta": {
       "title": "Image Comparer (rgthree)"
-    }
-  },
-  "75": {
-    "inputs": {
-      "PowerLoraLoaderHeaderWidget": {
-        "type": "PowerLoraLoaderHeaderWidget"
-      },
-      "lora_1": {
-        "on": true,
-        "lora": "JuggerCineXL2.safetensors",
-        "strength": 1
-      },
-      "\u2795 Add Lora": "",
-      "model": [
-        "46",
-        0
-      ],
-      "clip": [
-        "46",
-        1
-      ]
-    },
-    "class_type": "Power Lora Loader (rgthree)",
-    "_meta": {
-      "title": "Power Lora Loader (rgthree)"
     }
   }
 }
