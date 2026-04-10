@@ -464,33 +464,11 @@
       "title": "Display Power Primitive"
     }
   },
-  "34": {
-    "inputs": {
-      "outputs": {
-        "outputs": [
-          "INT"
-        ]
-      },
-      "code": "1+2+3+b",
-      "a": [
-        "32",
-        0
-      ],
-      "b": [
-        "8",
-        0
-      ]
-    },
-    "class_type": "Power Puter (rgthree)",
-    "_meta": {
-      "title": "Power Puter"
-    }
-  },
   "35": {
     "inputs": {
       "output": "",
       "source": [
-        "34",
+        "32",
         0
       ]
     },
