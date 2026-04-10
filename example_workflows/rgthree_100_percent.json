@@ -1,787 +1,3840 @@
 {
-  "1": {
-    "inputs": {
-      "image": "pasted/image (244).png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Test Image"
-    }
-  },
-  "2": {
-    "inputs": {
-      "measurement": "pixels",
-      "width": [
-        "19",
-        0
+  "id": "00000000-0000-0000-0000-000000000000",
+  "revision": 0,
+  "last_node_id": 60,
+  "last_link_id": 137,
+  "nodes": [
+    {
+      "id": 2,
+      "type": "Image Resize (rgthree)",
+      "pos": [
+        2927.937510681152,
+        130
       ],
-      "height": [
-        "19",
+      "size": [
+        270,
+        194
+      ],
+      "flags": {},
+      "order": 42,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 71
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 69
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 70
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            72,
+            135
+          ]
+        },
+        {
+          "name": "WIDTH",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "HEIGHT",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "title": "Resize via rgthree",
+      "properties": {
+        "Node name for S&R": "Image Resize (rgthree)"
+      },
+      "widgets_values": [
+        "Pixels",
+        0,
+        0,
+        "contain",
+        "bicubic"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "Display Int (rgthree)",
+      "pos": [
+        600,
+        306
+      ],
+      "size": [
+        171.29999389648438,
+        76
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "input",
+          "type": "INT",
+          "link": 73
+        }
+      ],
+      "outputs": [],
+      "title": "Display Seed",
+      "properties": {
+        "Node name for S&R": "Display Int (rgthree)"
+      },
+      "widgets_values": [
+        5770521
+      ]
+    },
+    {
+      "id": 6,
+      "type": "Context (rgthree)",
+      "pos": [
+        1557.1875091552733,
+        1404
+      ],
+      "size": [
+        231.03750000000002,
+        186
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "base_ctx",
+          "type": "RGTHREE_CONTEXT",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "model",
+          "type": "MODEL",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "clip",
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "vae",
+          "type": "VAE",
+          "link": 74
+        },
+        {
+          "dir": 3,
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "latent",
+          "type": "LATENT",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "images",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "seed",
+          "type": "INT",
+          "link": 75
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "name": "CONTEXT",
+          "shape": 3,
+          "type": "RGTHREE_CONTEXT",
+          "links": [
+            84,
+            88,
+            97,
+            101
+          ]
+        },
+        {
+          "dir": 4,
+          "name": "MODEL",
+          "shape": 3,
+          "type": "MODEL",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "CLIP",
+          "shape": 3,
+          "type": "CLIP",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "VAE",
+          "shape": 3,
+          "type": "VAE",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "POSITIVE",
+          "shape": 3,
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "NEGATIVE",
+          "shape": 3,
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "LATENT",
+          "shape": 3,
+          "type": "LATENT",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "IMAGE",
+          "shape": 3,
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "SEED",
+          "shape": 3,
+          "type": "INT",
+          "links": [
+            76
+          ]
+        }
+      ],
+      "title": "Create Context",
+      "properties": {},
+      "widgets_values": []
+    },
+    {
+      "id": 7,
+      "type": "Display Int (rgthree)",
+      "pos": [
+        2084.812515258789,
+        2342
+      ],
+      "size": [
+        171.29999389648438,
+        76
+      ],
+      "flags": {},
+      "order": 36,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "input",
+          "type": "INT",
+          "link": 76
+        }
+      ],
+      "outputs": [],
+      "title": "Display Context Seed",
+      "properties": {
+        "Node name for S&R": "Display Int (rgthree)"
+      },
+      "widgets_values": [
+        5770522
+      ]
+    },
+    {
+      "id": 9,
+      "type": "Display Any (rgthree)",
+      "pos": [
+        1057.1875091552733,
+        1950
+      ],
+      "size": [
+        180.32500305175782,
+        76
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "source",
+          "type": "*",
+          "link": 77
+        }
+      ],
+      "outputs": [],
+      "title": "Display Any",
+      "properties": {
+        "Node name for S&R": "Display Any (rgthree)"
+      },
+      "widgets_values": [
+        "5770522"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "Context (rgthree)",
+      "pos": [
+        1057.1875091552733,
+        2106
+      ],
+      "size": [
+        231.03750000000002,
+        186
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "base_ctx",
+          "type": "RGTHREE_CONTEXT",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "model",
+          "type": "MODEL",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "clip",
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "vae",
+          "type": "VAE",
+          "link": 78
+        },
+        {
+          "dir": 3,
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "latent",
+          "type": "LATENT",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "images",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "seed",
+          "type": "INT",
+          "link": 79
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "name": "CONTEXT",
+          "shape": 3,
+          "type": "RGTHREE_CONTEXT",
+          "links": [
+            83,
+            98
+          ]
+        },
+        {
+          "dir": 4,
+          "name": "MODEL",
+          "shape": 3,
+          "type": "MODEL",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "CLIP",
+          "shape": 3,
+          "type": "CLIP",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "VAE",
+          "shape": 3,
+          "type": "VAE",
+          "links": [
+            74
+          ]
+        },
+        {
+          "dir": 4,
+          "name": "POSITIVE",
+          "shape": 3,
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "NEGATIVE",
+          "shape": 3,
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "LATENT",
+          "shape": 3,
+          "type": "LATENT",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "IMAGE",
+          "shape": 3,
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "SEED",
+          "shape": 3,
+          "type": "INT",
+          "links": [
+            75
+          ]
+        }
+      ],
+      "title": "Empty Context",
+      "properties": {},
+      "widgets_values": []
+    },
+    {
+      "id": 12,
+      "type": "Context Switch (rgthree)",
+      "pos": [
+        2084.812515258789,
+        834
+      ],
+      "size": [
+        304.1625,
+        186
+      ],
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "ctx_01",
+          "type": "RGTHREE_CONTEXT",
+          "link": 82
+        },
+        {
+          "dir": 3,
+          "name": "ctx_02",
+          "type": "RGTHREE_CONTEXT",
+          "link": 83
+        },
+        {
+          "dir": 3,
+          "name": "ctx_03",
+          "type": "RGTHREE_CONTEXT",
+          "link": 84
+        },
+        {
+          "dir": 3,
+          "name": "ctx_04",
+          "type": "RGTHREE_CONTEXT",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "ctx_05",
+          "type": "RGTHREE_CONTEXT",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "name": "CONTEXT",
+          "shape": 3,
+          "type": "RGTHREE_CONTEXT",
+          "links": [
+            89
+          ]
+        },
+        {
+          "dir": 4,
+          "name": "MODEL",
+          "shape": 3,
+          "type": "MODEL",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "CLIP",
+          "shape": 3,
+          "type": "CLIP",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "VAE",
+          "shape": 3,
+          "type": "VAE",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "POSITIVE",
+          "shape": 3,
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "NEGATIVE",
+          "shape": 3,
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "LATENT",
+          "shape": 3,
+          "type": "LATENT",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "IMAGE",
+          "shape": 3,
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "SEED",
+          "shape": 3,
+          "type": "INT",
+          "links": [
+            85
+          ]
+        }
+      ],
+      "title": "Switch Context",
+      "properties": {},
+      "widgets_values": []
+    },
+    {
+      "id": 13,
+      "type": "Display Int (rgthree)",
+      "pos": [
+        2526.7375198364257,
+        622
+      ],
+      "size": [
+        171.29999389648438,
+        76
+      ],
+      "flags": {},
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "input",
+          "type": "INT",
+          "link": 85
+        }
+      ],
+      "outputs": [],
+      "title": "Display Switched Seed",
+      "properties": {
+        "Node name for S&R": "Display Int (rgthree)"
+      },
+      "widgets_values": [
+        5770522
+      ]
+    },
+    {
+      "id": 17,
+      "type": "Context Merge (rgthree)",
+      "pos": [
+        2526.7375198364257,
+        306
+      ],
+      "size": [
+        301.1999908447266,
+        186
+      ],
+      "flags": {},
+      "order": 38,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "ctx_01",
+          "type": "RGTHREE_CONTEXT",
+          "link": 87
+        },
+        {
+          "dir": 3,
+          "name": "ctx_02",
+          "type": "RGTHREE_CONTEXT",
+          "link": 88
+        },
+        {
+          "dir": 3,
+          "name": "ctx_03",
+          "type": "RGTHREE_CONTEXT",
+          "link": 89
+        },
+        {
+          "dir": 3,
+          "name": "ctx_04",
+          "type": "RGTHREE_CONTEXT",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "ctx_05",
+          "type": "RGTHREE_CONTEXT",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "name": "CONTEXT",
+          "shape": 3,
+          "type": "RGTHREE_CONTEXT",
+          "links": [
+            86
+          ]
+        },
+        {
+          "dir": 4,
+          "name": "MODEL",
+          "shape": 3,
+          "type": "MODEL",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "CLIP",
+          "shape": 3,
+          "type": "CLIP",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "VAE",
+          "shape": 3,
+          "type": "VAE",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "POSITIVE",
+          "shape": 3,
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "NEGATIVE",
+          "shape": 3,
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "LATENT",
+          "shape": 3,
+          "type": "LATENT",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "IMAGE",
+          "shape": 3,
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "SEED",
+          "shape": 3,
+          "type": "INT",
+          "links": [
+            90
+          ]
+        }
+      ],
+      "title": "Merge Contexts",
+      "properties": {},
+      "widgets_values": []
+    },
+    {
+      "id": 19,
+      "type": "Image or Latent Size (rgthree)",
+      "pos": [
+        600,
+        130
+      ],
+      "size": [
+        357.18750915527346,
+        46
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input",
+          "type": [
+            "IMAGE",
+            "LATENT",
+            "MASK"
+          ],
+          "link": 91
+        }
+      ],
+      "outputs": [
+        {
+          "name": "WIDTH",
+          "shape": 3,
+          "type": "INT",
+          "links": [
+            69,
+            92,
+            106
+          ]
+        },
+        {
+          "name": "HEIGHT",
+          "shape": 3,
+          "type": "INT",
+          "links": [
+            70
+          ]
+        }
+      ],
+      "title": "Measure Size",
+      "properties": {},
+      "widgets_values": []
+    },
+    {
+      "id": 20,
+      "type": "Display Int (rgthree)",
+      "pos": [
+        1057.1875091552733,
+        130
+      ],
+      "size": [
+        171.29999389648438,
+        76
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "input",
+          "type": "INT",
+          "link": 92
+        }
+      ],
+      "outputs": [],
+      "title": "Display Width",
+      "properties": {
+        "Node name for S&R": "Display Int (rgthree)"
+      },
+      "widgets_values": [
+        768
+      ]
+    },
+    {
+      "id": 21,
+      "type": "Context Big (rgthree)",
+      "pos": [
+        1057.1875091552733,
+        834
+      ],
+      "size": [
+        301.46249771118164,
+        466
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "base_ctx",
+          "type": "RGTHREE_CONTEXT",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "model",
+          "type": "MODEL",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "clip",
+          "type": "CLIP",
+          "link": 93
+        },
+        {
+          "dir": 3,
+          "name": "vae",
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "latent",
+          "type": "LATENT",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "images",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "seed",
+          "type": "INT",
+          "link": 94
+        },
+        {
+          "dir": 3,
+          "name": "steps",
+          "type": "INT",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "step_refiner",
+          "type": "INT",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "cfg",
+          "type": "FLOAT",
+          "link": 95
+        },
+        {
+          "dir": 3,
+          "name": "ckpt_name",
+          "type": [
+            "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+            "ltx-2-19b-dev-fp8.safetensors",
+            "ltx-video-2b-v0.9.5.safetensors",
+            "master_proSDXLV8.safetensors",
+            "master_v7FP16VAE.safetensors",
+            "perfectdeliberate_v5SD15.safetensors",
+            "sd1.5-real-dream-16.safetensors",
+            "sd3.5_medium.safetensors"
+          ],
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "sampler",
+          "type": [
+            "euler",
+            "euler_cfg_pp",
+            "euler_ancestral",
+            "euler_ancestral_cfg_pp",
+            "heun",
+            "heunpp2",
+            "exp_heun_2_x0",
+            "exp_heun_2_x0_sde",
+            "dpm_2",
+            "dpm_2_ancestral",
+            "lms",
+            "dpm_fast",
+            "dpm_adaptive",
+            "dpmpp_2s_ancestral",
+            "dpmpp_2s_ancestral_cfg_pp",
+            "dpmpp_sde",
+            "dpmpp_sde_gpu",
+            "dpmpp_2m",
+            "dpmpp_2m_cfg_pp",
+            "dpmpp_2m_sde",
+            "dpmpp_2m_sde_gpu",
+            "dpmpp_2m_sde_heun",
+            "dpmpp_2m_sde_heun_gpu",
+            "dpmpp_3m_sde",
+            "dpmpp_3m_sde_gpu",
+            "ddpm",
+            "lcm",
+            "ipndm",
+            "ipndm_v",
+            "deis",
+            "res_multistep",
+            "res_multistep_cfg_pp",
+            "res_multistep_ancestral",
+            "res_multistep_ancestral_cfg_pp",
+            "gradient_estimation",
+            "gradient_estimation_cfg_pp",
+            "er_sde",
+            "seeds_2",
+            "seeds_3",
+            "sa_solver",
+            "sa_solver_pece",
+            "ddim",
+            "uni_pc",
+            "uni_pc_bh2"
+          ],
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "scheduler",
+          "type": [
+            "simple",
+            "sgm_uniform",
+            "karras",
+            "exponential",
+            "ddim_uniform",
+            "beta",
+            "normal",
+            "linear_quadratic",
+            "kl_optimal"
+          ],
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "clip_width",
+          "type": "INT",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "clip_height",
+          "type": "INT",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "text_pos_g",
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "text_pos_l",
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "text_neg_g",
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "text_neg_l",
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "mask",
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "control_net",
+          "type": "CONTROL_NET",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "name": "CONTEXT",
+          "shape": 3,
+          "type": "RGTHREE_CONTEXT",
+          "links": [
+            99,
+            102
+          ]
+        },
+        {
+          "dir": 4,
+          "name": "MODEL",
+          "shape": 3,
+          "type": "MODEL",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "CLIP",
+          "shape": 3,
+          "type": "CLIP",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "VAE",
+          "shape": 3,
+          "type": "VAE",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "POSITIVE",
+          "shape": 3,
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "NEGATIVE",
+          "shape": 3,
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "LATENT",
+          "shape": 3,
+          "type": "LATENT",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "IMAGE",
+          "shape": 3,
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "SEED",
+          "shape": 3,
+          "type": "INT",
+          "links": [
+            96
+          ]
+        },
+        {
+          "dir": 4,
+          "name": "STEPS",
+          "shape": 3,
+          "type": "INT",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "STEP_REFINER",
+          "shape": 3,
+          "type": "INT",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "CFG",
+          "shape": 3,
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "CKPT_NAME",
+          "shape": 3,
+          "type": "COMBO",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "SAMPLER",
+          "shape": 3,
+          "type": "COMBO",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "SCHEDULER",
+          "shape": 3,
+          "type": "COMBO",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "CLIP_WIDTH",
+          "shape": 3,
+          "type": "INT",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "CLIP_HEIGHT",
+          "shape": 3,
+          "type": "INT",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "TEXT_POS_G",
+          "shape": 3,
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "TEXT_POS_L",
+          "shape": 3,
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "TEXT_NEG_G",
+          "shape": 3,
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "TEXT_NEG_L",
+          "shape": 3,
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "MASK",
+          "shape": 3,
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "CONTROL_NET",
+          "shape": 3,
+          "type": "CONTROL_NET",
+          "links": null
+        }
+      ],
+      "title": "Big Context",
+      "properties": {},
+      "widgets_values": []
+    },
+    {
+      "id": 23,
+      "type": "Context Switch Big (rgthree)",
+      "pos": [
+        2084.812515258789,
+        1150
+      ],
+      "size": [
+        341.92500457763674,
+        466
+      ],
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "ctx_01",
+          "type": "RGTHREE_CONTEXT",
+          "link": 97
+        },
+        {
+          "dir": 3,
+          "name": "ctx_02",
+          "type": "RGTHREE_CONTEXT",
+          "link": 98
+        },
+        {
+          "dir": 3,
+          "name": "ctx_03",
+          "type": "RGTHREE_CONTEXT",
+          "link": 99
+        },
+        {
+          "dir": 3,
+          "name": "ctx_04",
+          "type": "RGTHREE_CONTEXT",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "ctx_05",
+          "type": "RGTHREE_CONTEXT",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "name": "CONTEXT",
+          "shape": 3,
+          "type": "RGTHREE_CONTEXT",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "MODEL",
+          "shape": 3,
+          "type": "MODEL",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "CLIP",
+          "shape": 3,
+          "type": "CLIP",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "VAE",
+          "shape": 3,
+          "type": "VAE",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "POSITIVE",
+          "shape": 3,
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "NEGATIVE",
+          "shape": 3,
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "LATENT",
+          "shape": 3,
+          "type": "LATENT",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "IMAGE",
+          "shape": 3,
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "SEED",
+          "shape": 3,
+          "type": "INT",
+          "links": [
+            100
+          ]
+        },
+        {
+          "dir": 4,
+          "name": "STEPS",
+          "shape": 3,
+          "type": "INT",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "STEP_REFINER",
+          "shape": 3,
+          "type": "INT",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "CFG",
+          "shape": 3,
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "CKPT_NAME",
+          "shape": 3,
+          "type": "COMBO",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "SAMPLER",
+          "shape": 3,
+          "type": "COMBO",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "SCHEDULER",
+          "shape": 3,
+          "type": "COMBO",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "CLIP_WIDTH",
+          "shape": 3,
+          "type": "INT",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "CLIP_HEIGHT",
+          "shape": 3,
+          "type": "INT",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "TEXT_POS_G",
+          "shape": 3,
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "TEXT_POS_L",
+          "shape": 3,
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "TEXT_NEG_G",
+          "shape": 3,
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "TEXT_NEG_L",
+          "shape": 3,
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "MASK",
+          "shape": 3,
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "CONTROL_NET",
+          "shape": 3,
+          "type": "CONTROL_NET",
+          "links": null
+        }
+      ],
+      "title": "Big Context Switch",
+      "properties": {},
+      "widgets_values": []
+    },
+    {
+      "id": 24,
+      "type": "Display Int (rgthree)",
+      "pos": [
+        2526.7375198364257,
+        778
+      ],
+      "size": [
+        171.29999389648438,
+        76
+      ],
+      "flags": {},
+      "order": 40,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "input",
+          "type": "INT",
+          "link": 100
+        }
+      ],
+      "outputs": [],
+      "title": "Display Big Switch Seed",
+      "properties": {
+        "Node name for S&R": "Display Int (rgthree)"
+      },
+      "widgets_values": [
+        5770522
+      ]
+    },
+    {
+      "id": 25,
+      "type": "Context Merge Big (rgthree)",
+      "pos": [
+        2084.812515258789,
+        1746
+      ],
+      "size": [
+        338.9624954223633,
+        466
+      ],
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "ctx_01",
+          "type": "RGTHREE_CONTEXT",
+          "link": 101
+        },
+        {
+          "dir": 3,
+          "name": "ctx_02",
+          "type": "RGTHREE_CONTEXT",
+          "link": 102
+        },
+        {
+          "dir": 3,
+          "name": "ctx_03",
+          "type": "RGTHREE_CONTEXT",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "ctx_04",
+          "type": "RGTHREE_CONTEXT",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "ctx_05",
+          "type": "RGTHREE_CONTEXT",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "name": "CONTEXT",
+          "shape": 3,
+          "type": "RGTHREE_CONTEXT",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "MODEL",
+          "shape": 3,
+          "type": "MODEL",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "CLIP",
+          "shape": 3,
+          "type": "CLIP",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "VAE",
+          "shape": 3,
+          "type": "VAE",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "POSITIVE",
+          "shape": 3,
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "NEGATIVE",
+          "shape": 3,
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "LATENT",
+          "shape": 3,
+          "type": "LATENT",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "IMAGE",
+          "shape": 3,
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "SEED",
+          "shape": 3,
+          "type": "INT",
+          "links": [
+            103
+          ]
+        },
+        {
+          "dir": 4,
+          "name": "STEPS",
+          "shape": 3,
+          "type": "INT",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "STEP_REFINER",
+          "shape": 3,
+          "type": "INT",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "CFG",
+          "shape": 3,
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "CKPT_NAME",
+          "shape": 3,
+          "type": "COMBO",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "SAMPLER",
+          "shape": 3,
+          "type": "COMBO",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "SCHEDULER",
+          "shape": 3,
+          "type": "COMBO",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "CLIP_WIDTH",
+          "shape": 3,
+          "type": "INT",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "CLIP_HEIGHT",
+          "shape": 3,
+          "type": "INT",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "TEXT_POS_G",
+          "shape": 3,
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "TEXT_POS_L",
+          "shape": 3,
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "TEXT_NEG_G",
+          "shape": 3,
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "TEXT_NEG_L",
+          "shape": 3,
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "MASK",
+          "shape": 3,
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "CONTROL_NET",
+          "shape": 3,
+          "type": "CONTROL_NET",
+          "links": null
+        }
+      ],
+      "title": "Big Context Merge",
+      "properties": {},
+      "widgets_values": []
+    },
+    {
+      "id": 26,
+      "type": "Display Int (rgthree)",
+      "pos": [
+        2526.7375198364257,
+        934
+      ],
+      "size": [
+        171.29999389648438,
+        76
+      ],
+      "flags": {},
+      "order": 41,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "input",
+          "type": "INT",
+          "link": 103
+        }
+      ],
+      "outputs": [],
+      "title": "Display Big Merge Seed",
+      "properties": {
+        "Node name for S&R": "Display Int (rgthree)"
+      },
+      "widgets_values": [
+        5770521
+      ]
+    },
+    {
+      "id": 28,
+      "type": "Display Any (rgthree)",
+      "pos": [
+        1557.1875091552733,
+        130
+      ],
+      "size": [
+        180.32500305175782,
+        76
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "source",
+          "type": "*",
+          "link": 107
+        }
+      ],
+      "outputs": [],
+      "title": "Display Any Switch Output",
+      "properties": {
+        "Node name for S&R": "Display Any (rgthree)"
+      },
+      "widgets_values": [
+        "5770521"
+      ]
+    },
+    {
+      "id": 32,
+      "type": "Power Primitive (rgthree)",
+      "pos": [
+        100,
+        882
+      ],
+      "size": [
+        307.87500915527346,
+        136
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "INT",
+          "name": "*",
+          "shape": 3,
+          "type": "INT",
+          "links": [
+            112,
+            113
+          ]
+        }
+      ],
+      "title": "Power Primitive",
+      "properties": {
+        "hideTypeSelector": false
+      },
+      "widgets_values": [
+        "INT",
+        42
+      ]
+    },
+    {
+      "id": 33,
+      "type": "Display Any (rgthree)",
+      "pos": [
+        600,
+        462
+      ],
+      "size": [
+        180.32500305175782,
+        76
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "source",
+          "type": "*",
+          "link": 112
+        }
+      ],
+      "outputs": [],
+      "title": "Display Power Primitive",
+      "properties": {
+        "Node name for S&R": "Display Any (rgthree)"
+      },
+      "widgets_values": [
+        "42"
+      ]
+    },
+    {
+      "id": 35,
+      "type": "Display Any (rgthree)",
+      "pos": [
+        1057.1875091552733,
+        522
+      ],
+      "size": [
+        180.32500305175782,
+        76
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "source",
+          "type": "*",
+          "link": 115
+        }
+      ],
+      "outputs": [],
+      "title": "Display Power Puter Result",
+      "properties": {
+        "Node name for S&R": "Display Any (rgthree)"
+      },
+      "widgets_values": [
+        "5770528"
+      ]
+    },
+    {
+      "id": 36,
+      "type": "SDXL Empty Latent Image (rgthree)",
+      "pos": [
+        100,
+        1148
+      ],
+      "size": [
+        334.59999694824216,
+        146
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            116
+          ]
+        },
+        {
+          "name": "CLIP_WIDTH",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "CLIP_HEIGHT",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "title": "SDXL Empty Latent",
+      "properties": {
+        "Node name for S&R": "SDXL Empty Latent Image (rgthree)"
+      },
+      "widgets_values": [
+        "1024 x 1024  (square)",
+        2,
         1
+      ]
+    },
+    {
+      "id": 37,
+      "type": "Display Any (rgthree)",
+      "pos": [
+        600,
+        794
       ],
-      "fit": "contain",
-      "method": "bicubic",
-      "image": [
-        "58",
-        0
-      ]
-    },
-    "class_type": "Image Resize (rgthree)",
-    "_meta": {
-      "title": "Resize via rgthree"
-    }
-  },
-  "3": {
-    "inputs": {
-      "filename_prefix": "rgthree_image_resize",
-      "images": [
-        "2",
-        0
-      ]
-    },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "Save Resized Image"
-    }
-  },
-  "4": {
-    "inputs": {
-      "seed": 504820430351109
-    },
-    "class_type": "Seed (rgthree)",
-    "_meta": {
-      "title": "Generate Seed"
-    }
-  },
-  "5": {
-    "inputs": {
-      "output": "",
-      "input": [
-        "4",
-        0
-      ]
-    },
-    "class_type": "Display Int (rgthree)",
-    "_meta": {
-      "title": "Display Seed"
-    }
-  },
-  "6": {
-    "inputs": {
-      "vae": [
-        "10",
-        3
+      "size": [
+        180.32500305175782,
+        76
       ],
-      "seed": [
-        "10",
-        8
-      ]
-    },
-    "class_type": "Context (rgthree)",
-    "_meta": {
-      "title": "Create Context"
-    }
-  },
-  "7": {
-    "inputs": {
-      "output": "",
-      "input": [
-        "6",
-        8
-      ]
-    },
-    "class_type": "Display Int (rgthree)",
-    "_meta": {
-      "title": "Display Context Seed"
-    }
-  },
-  "8": {
-    "inputs": {
-      "seed": 295685358250091
-    },
-    "class_type": "Seed (rgthree)",
-    "_meta": {
-      "title": "Generate Seed"
-    }
-  },
-  "9": {
-    "inputs": {
-      "output": "",
-      "source": [
-        "11",
-        8
-      ]
-    },
-    "class_type": "Display Any (rgthree)",
-    "_meta": {
-      "title": "Display Any"
-    }
-  },
-  "10": {
-    "inputs": {
-      "vae": [
-        "11",
-        3
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "source",
+          "type": "*",
+          "link": 116
+        }
       ],
-      "seed": [
-        "11",
-        8
+      "outputs": [],
+      "title": "Display SDXL Latent",
+      "properties": {
+        "Node name for S&R": "Display Any (rgthree)"
+      },
+      "widgets_values": [
+        "{'samples': tensor([[[[0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          ...,\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.]],\n\n         [[0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          ...,\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.]],\n\n         [[0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          ...,\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.]],\n\n         [[0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          ...,\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.],\n          [0., 0., 0.,  ..., 0., 0., 0.]]]]), 'downscale_ratio_spacial': 8}"
       ]
     },
-    "class_type": "Context (rgthree)",
-    "_meta": {
-      "title": "Empty Context"
-    }
-  },
-  "11": {
-    "inputs": {
-      "vae": [
-        "46",
-        2
+    {
+      "id": 38,
+      "type": "Lora Loader Stack (rgthree)",
+      "pos": [
+        600,
+        1106
       ],
-      "seed": [
-        "8",
-        0
-      ]
-    },
-    "class_type": "Context (rgthree)",
-    "_meta": {
-      "title": "Seeded Context"
-    }
-  },
-  "12": {
-    "inputs": {
-      "ctx_01": [
-        "11",
-        0
+      "size": [
+        283.47499694824216,
+        246
       ],
-      "ctx_02": [
-        "10",
-        0
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 117
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 118
+        }
       ],
-      "ctx_03": [
-        "6",
-        0
-      ]
-    },
-    "class_type": "Context Switch (rgthree)",
-    "_meta": {
-      "title": "Switch Context"
-    }
-  },
-  "13": {
-    "inputs": {
-      "output": "",
-      "input": [
-        "12",
-        8
-      ]
-    },
-    "class_type": "Display Int (rgthree)",
-    "_meta": {
-      "title": "Display Switched Seed"
-    }
-  },
-  "14": {
-    "inputs": {
-      "output": "",
-      "source": [
-        "17",
-        0
-      ]
-    },
-    "class_type": "Display Any (rgthree)",
-    "_meta": {
-      "title": "Display Any (rgthree)"
-    }
-  },
-  "17": {
-    "inputs": {
-      "ctx_01": [
-        "11",
-        0
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            119,
+            121
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            93,
+            122
+          ]
+        }
       ],
-      "ctx_02": [
-        "6",
-        0
-      ],
-      "ctx_03": [
-        "12",
-        0
-      ]
-    },
-    "class_type": "Context Merge (rgthree)",
-    "_meta": {
-      "title": "Merge Contexts"
-    }
-  },
-  "18": {
-    "inputs": {
-      "output": "",
-      "input": [
-        "17",
-        8
-      ]
-    },
-    "class_type": "Display Int (rgthree)",
-    "_meta": {
-      "title": "Display Merged Seed"
-    }
-  },
-  "19": {
-    "inputs": {
-      "input": [
-        "1",
-        0
-      ]
-    },
-    "class_type": "Image or Latent Size (rgthree)",
-    "_meta": {
-      "title": "Measure Size"
-    }
-  },
-  "20": {
-    "inputs": {
-      "output": "",
-      "input": [
-        "19",
-        0
-      ]
-    },
-    "class_type": "Display Int (rgthree)",
-    "_meta": {
-      "title": "Display Width"
-    }
-  },
-  "21": {
-    "inputs": {
-      "clip": [
-        "38",
+      "title": "Lora Loader Stack",
+      "properties": {
+        "Node name for S&R": "Lora Loader Stack (rgthree)"
+      },
+      "widgets_values": [
+        "None",
+        1,
+        "None",
+        1,
+        "None",
+        1,
+        "None",
         1
+      ]
+    },
+    {
+      "id": 39,
+      "type": "Display Any (rgthree)",
+      "pos": [
+        1057.1875091552733,
+        678
       ],
-      "seed": [
-        "4",
-        0
+      "size": [
+        180.32500305175782,
+        76
       ],
-      "cfg": [
-        "40",
-        2
-      ]
-    },
-    "class_type": "Context Big (rgthree)",
-    "_meta": {
-      "title": "Big Context"
-    }
-  },
-  "22": {
-    "inputs": {
-      "output": "",
-      "input": [
-        "21",
-        8
-      ]
-    },
-    "class_type": "Display Int (rgthree)",
-    "_meta": {
-      "title": "Display Big Context Seed"
-    }
-  },
-  "23": {
-    "inputs": {
-      "ctx_01": [
-        "6",
-        0
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "source",
+          "type": "*",
+          "link": 119
+        }
       ],
-      "ctx_02": [
-        "10",
-        0
+      "outputs": [],
+      "title": "Display Lora Stack",
+      "properties": {
+        "Node name for S&R": "Display Any (rgthree)"
+      },
+      "widgets_values": [
+        "<comfy.model_patcher.ModelPatcherDynamic object at 0x7ab7ac73bcb0>"
+      ]
+    },
+    {
+      "id": 40,
+      "type": "KSampler Config (rgthree)",
+      "pos": [
+        100,
+        1424
       ],
-      "ctx_03": [
-        "21",
-        0
-      ]
-    },
-    "class_type": "Context Switch Big (rgthree)",
-    "_meta": {
-      "title": "Big Context Switch"
-    }
-  },
-  "24": {
-    "inputs": {
-      "output": "",
-      "input": [
-        "23",
-        8
-      ]
-    },
-    "class_type": "Display Int (rgthree)",
-    "_meta": {
-      "title": "Display Big Switch Seed"
-    }
-  },
-  "25": {
-    "inputs": {
-      "ctx_01": [
-        "6",
-        0
+      "size": [
+        274.3750061035156,
+        234
       ],
-      "ctx_02": [
-        "21",
-        0
-      ]
-    },
-    "class_type": "Context Merge Big (rgthree)",
-    "_meta": {
-      "title": "Big Context Merge"
-    }
-  },
-  "26": {
-    "inputs": {
-      "output": "",
-      "input": [
-        "25",
-        8
-      ]
-    },
-    "class_type": "Display Int (rgthree)",
-    "_meta": {
-      "title": "Display Big Merge Seed"
-    }
-  },
-  "27": {
-    "inputs": {
-      "any_01": [
-        "4",
-        0
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STEPS",
+          "type": "INT",
+          "links": [
+            120
+          ]
+        },
+        {
+          "name": "REFINER_STEP",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "CFG",
+          "type": "FLOAT",
+          "links": [
+            95
+          ]
+        },
+        {
+          "name": "SAMPLER",
+          "type": "COMBO",
+          "links": null
+        },
+        {
+          "name": "SCHEDULER",
+          "type": "COMBO",
+          "links": null
+        }
       ],
-      "any_02": [
-        "8",
-        0
+      "title": "KSampler Config",
+      "properties": {
+        "Node name for S&R": "KSampler Config (rgthree)"
+      },
+      "widgets_values": [
+        30,
+        24,
+        7,
+        "euler",
+        "normal"
+      ]
+    },
+    {
+      "id": 41,
+      "type": "Display Any (rgthree)",
+      "pos": [
+        600,
+        950
       ],
-      "any_03": [
-        "19",
-        0
+      "size": [
+        180.32500305175782,
+        76
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "source",
+          "type": "*",
+          "link": 120
+        }
+      ],
+      "outputs": [],
+      "title": "Display KSampler Config",
+      "properties": {
+        "Node name for S&R": "Display Any (rgthree)"
+      },
+      "widgets_values": [
+        "30"
       ]
     },
-    "class_type": "Any Switch (rgthree)",
-    "_meta": {
-      "title": "Any Switch"
-    }
-  },
-  "28": {
-    "inputs": {
-      "output": "",
-      "source": [
-        "27",
-        0
+    {
+      "id": 43,
+      "type": "Display Any (rgthree)",
+      "pos": [
+        1557.1875091552733,
+        442
+      ],
+      "size": [
+        180.32500305175782,
+        76
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "source",
+          "type": "*",
+          "link": 123
+        }
+      ],
+      "outputs": [],
+      "title": "Display SDXL Positive",
+      "properties": {
+        "Node name for S&R": "Display Any (rgthree)"
+      },
+      "widgets_values": [
+        "[[tensor([[[-3.8784e+00, -2.3454e+00,  4.4154e+00,  ...,  2.8353e-01,\n           3.4789e-01, -2.0192e-01],\n         [-1.7036e-01, -7.0759e-01, -1.1957e+00,  ...,  3.1734e-01,\n          -7.6701e-02,  1.5642e+00],\n         [-6.2514e-01,  1.3905e+00, -5.3177e-01,  ...,  3.2650e-01,\n           1.6236e-01, -8.0062e-02],\n         ...,\n         [-4.1000e-03,  8.9188e-01, -3.7736e-01,  ..., -1.0322e+00,\n          -1.1939e-01,  3.9960e-02],\n         [-3.6022e-02,  8.6250e-01, -3.4103e-01,  ..., -1.0992e+00,\n          -2.2566e-01,  1.5245e-01],\n         [ 2.1468e-02,  9.7332e-01, -3.3619e-01,  ..., -9.7099e-01,\n          -2.0539e-01,  4.7693e-02]]]), {'pooled_output': tensor([[-1.0892,  1.1532,  0.7217,  ...,  0.4926, -0.4159,  1.0108]])}]]"
       ]
     },
-    "class_type": "Display Any (rgthree)",
-    "_meta": {
-      "title": "Display Any Switch Output"
-    }
-  },
-  "29": {
-    "inputs": {
-      "measurement": "pixels",
-      "left": 32,
-      "right": 0,
-      "top": 24,
-      "bottom": 8,
-      "image": [
-        "58",
-        0
+    {
+      "id": 45,
+      "type": "Display Any (rgthree)",
+      "pos": [
+        2084.812515258789,
+        130
+      ],
+      "size": [
+        180.32500305175782,
+        76
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "source",
+          "type": "*",
+          "link": 126
+        }
+      ],
+      "outputs": [],
+      "title": "Display Power Prompt",
+      "properties": {
+        "Node name for S&R": "Display Any (rgthree)"
+      },
+      "widgets_values": [
+        "[[tensor([[[-3.8784, -2.3454,  4.4154,  ...,  0.2835,  0.3479, -0.2019],\n         [-0.1704, -0.7076, -1.1957,  ...,  0.3173, -0.0767,  1.5642],\n         [-0.6251,  1.3905, -0.5318,  ...,  0.3265,  0.1624, -0.0801],\n         ...,\n         [ 0.0668,  0.8009, -0.6188,  ..., -0.8157, -0.3415, -0.1496],\n         [ 0.0483,  0.7668, -0.6110,  ..., -0.8998, -0.4681, -0.1221],\n         [ 0.0890,  0.9635, -0.6764,  ..., -0.7661, -0.2292, -0.2465]]]), {'pooled_output': tensor([[-1.1619,  1.2664,  0.8505,  ...,  0.5804, -0.2871,  0.8921]])}]]"
       ]
     },
-    "class_type": "Image Inset Crop (rgthree)",
-    "_meta": {
-      "title": "Image Inset Crop"
-    }
-  },
-  "30": {
-    "inputs": {
-      "filename_prefix": "rgthree_inset_crop",
-      "images": [
-        "29",
-        0
+    {
+      "id": 46,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        100,
+        1788
+      ],
+      "size": [
+        270,
+        98
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            117,
+            129
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            118
+          ]
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            80,
+            134
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors"
       ]
     },
-    "class_type": "SaveImage",
-    "_meta": {
-      "title": "Save Inset Crop"
-    }
-  },
-  "31": {
-    "inputs": {
-      "rgthree_comparer": {
-        "images": [
+    {
+      "id": 47,
+      "type": "SDXL Power Prompt - Simple / Negative (rgthree)",
+      "pos": [
+        1557.1875091552733,
+        948
+      ],
+      "size": [
+        427.6250061035156,
+        326
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "opt_clip",
+          "shape": 7,
+          "type": "CLIP",
+          "link": 127
+        },
+        {
+          "dir": 3,
+          "name": "opt_clip_width",
+          "shape": 7,
+          "type": "INT",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "opt_clip_height",
+          "shape": 7,
+          "type": "INT",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            131
+          ]
+        },
+        {
+          "color_off": "#7F7",
+          "color_on": "#7F7",
+          "dir": 4,
+          "name": "TEXT_G",
+          "type": "STRING",
+          "links": [
+            128
+          ]
+        },
+        {
+          "color_off": "#7F7",
+          "color_on": "#7F7",
+          "dir": 4,
+          "name": "TEXT_L",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SDXL Power Prompt - Simple / Negative (rgthree)",
+        "combos_filter": ""
+      },
+      "widgets_values": [
+        "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+        "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+        "CHOOSE"
+      ]
+    },
+    {
+      "id": 48,
+      "type": "Display Any (rgthree)",
+      "pos": [
+        2084.812515258789,
+        678
+      ],
+      "size": [
+        180.32500305175782,
+        76
+      ],
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "source",
+          "type": "*",
+          "link": 128
+        }
+      ],
+      "outputs": [],
+      "title": "Display Any",
+      "properties": {
+        "Node name for S&R": "Display Any (rgthree)"
+      },
+      "widgets_values": [
+        "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走"
+      ]
+    },
+    {
+      "id": 57,
+      "type": "EmptyLatentImage",
+      "pos": [
+        100,
+        2346
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            132
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        1024,
+        1024,
+        1
+      ]
+    },
+    {
+      "id": 58,
+      "type": "VAEDecode",
+      "pos": [
+        2526.7375198364257,
+        130
+      ],
+      "size": [
+        140,
+        46
+      ],
+      "flags": {},
+      "order": 37,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 133
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 134
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            71,
+            108,
+            110,
+            111,
+            136
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 1,
+      "type": "LoadImage",
+      "pos": [
+        97.36205095553107,
+        -62.56883118859849
+      ],
+      "size": [
+        282.8249969482422,
+        314
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            91
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "Load Test Image",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "example.png",
+        "image"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "SaveImage",
+      "pos": [
+        3367.052584193163,
+        -63.88777552213229
+      ],
+      "size": [
+        752.7409921163298,
+        282
+      ],
+      "flags": {},
+      "order": 47,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 72
+        }
+      ],
+      "outputs": [],
+      "title": "Save Resized Image",
+      "properties": {},
+      "widgets_values": [
+        "rgthree_image_resize"
+      ]
+    },
+    {
+      "id": 31,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        2923.9806173031493,
+        670.7328125739542
+      ],
+      "size": [
+        467.66005709654735,
+        275.8446689001348
+      ],
+      "flags": {},
+      "order": 44,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 110
+        },
+        {
+          "dir": 3,
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 111
+        }
+      ],
+      "outputs": [],
+      "title": "Image Comparer",
+      "properties": {
+        "comparer_mode": "Slide"
+      },
+      "widgets_values": [
+        [
           {
             "name": "A",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_yxepl_00001_.png&type=temp&subfolder=&rand=0.3859596787711702"
+            "url": "/api/view?filename=rgthree.compare._temp_gucym_00015_.png&type=temp&subfolder=&rand=0.41714313880986253"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_yxepl_00002_.png&type=temp&subfolder=&rand=0.4835173461917841"
+            "url": "/api/view?filename=rgthree.compare._temp_gucym_00016_.png&type=temp&subfolder=&rand=0.44082808202716883"
           }
         ]
+      ]
+    },
+    {
+      "id": 18,
+      "type": "Display Int (rgthree)",
+      "pos": [
+        2858.0325553428406,
+        1413.2755721512779
+      ],
+      "size": [
+        171.29999389648438,
+        76
+      ],
+      "flags": {},
+      "order": 46,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "input",
+          "type": "INT",
+          "link": 90
+        }
+      ],
+      "outputs": [],
+      "title": "Display Merged Seed",
+      "properties": {
+        "Node name for S&R": "Display Int (rgthree)"
       },
-      "image_a": [
-        "58",
-        0
+      "widgets_values": [
+        5770522
+      ]
+    },
+    {
+      "id": 14,
+      "type": "Display Any (rgthree)",
+      "pos": [
+        2982.0151340170582,
+        1163.629135790148
       ],
-      "image_b": [
-        "58",
-        0
-      ]
-    },
-    "class_type": "Image Comparer (rgthree)",
-    "_meta": {
-      "title": "Image Comparer"
-    }
-  },
-  "32": {
-    "inputs": {
-      "type": "INT",
-      "value": 42
-    },
-    "class_type": "Power Primitive (rgthree)",
-    "_meta": {
-      "title": "Power Primitive"
-    }
-  },
-  "33": {
-    "inputs": {
-      "output": "",
-      "source": [
-        "32",
-        0
-      ]
-    },
-    "class_type": "Display Any (rgthree)",
-    "_meta": {
-      "title": "Display Power Primitive"
-    }
-  },
-  "34": {
-    "inputs": {
-      "outputs": {
-        "outputs": [
-          "INT"
-        ]
+      "size": [
+        180.32500305175782,
+        76.00000000000011
+      ],
+      "flags": {},
+      "order": 45,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "source",
+          "type": "*",
+          "link": 86
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "Display Any (rgthree)"
       },
-      "code": "1+2+3+b",
-      "a": [
-        "32",
-        0
+      "widgets_values": [
+        "{'model': None, 'clip': None, 'vae': <comfy.sd.VAE object at 0x7ab7d3a29070>, 'positive': None, 'negative': None, 'latent': None, 'images': None, 'seed': 5770522, 'steps': None, 'step_refiner': None, 'cfg': None, 'ckpt_name': None, 'sampler': None, 'scheduler': None, 'clip_width': None, 'clip_height': None, 'text_pos_g': None, 'text_pos_l': None, 'text_neg_g': None, 'text_neg_l': None, 'mask': None, 'control_net': None}"
+      ]
+    },
+    {
+      "id": 30,
+      "type": "SaveImage",
+      "pos": [
+        3463.337150730968,
+        1020.6117326277391
       ],
-      "b": [
-        "8",
-        0
-      ]
-    },
-    "class_type": "Power Puter (rgthree)",
-    "_meta": {
-      "title": "Power Puter"
-    }
-  },
-  "35": {
-    "inputs": {
-      "output": "",
-      "source": [
-        "34",
-        0
-      ]
-    },
-    "class_type": "Display Any (rgthree)",
-    "_meta": {
-      "title": "Display Power Puter Result"
-    }
-  },
-  "36": {
-    "inputs": {
-      "dimensions": "1024 x 1024  (square)",
-      "clip_scale": 2,
-      "batch_size": 1
-    },
-    "class_type": "SDXL Empty Latent Image (rgthree)",
-    "_meta": {
-      "title": "SDXL Empty Latent"
-    }
-  },
-  "37": {
-    "inputs": {
-      "output": "",
-      "source": [
-        "36",
-        0
-      ]
-    },
-    "class_type": "Display Any (rgthree)",
-    "_meta": {
-      "title": "Display SDXL Latent"
-    }
-  },
-  "38": {
-    "inputs": {
-      "lora_01": "None",
-      "strength_01": 1,
-      "lora_02": "None",
-      "strength_02": 1,
-      "lora_03": "None",
-      "strength_03": 1,
-      "lora_04": "None",
-      "strength_04": 1,
-      "model": [
-        "46",
-        0
+      "size": [
+        270,
+        58
       ],
-      "clip": [
-        "46",
+      "flags": {},
+      "order": 49,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 109
+        }
+      ],
+      "outputs": [],
+      "title": "Save Inset Crop",
+      "properties": {},
+      "widgets_values": [
+        "rgthree_inset_crop"
+      ]
+    },
+    {
+      "id": 54,
+      "type": "KSampler",
+      "pos": [
+        2084.812515258789,
+        286
+      ],
+      "size": [
+        270,
+        262
+      ],
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 129
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 130
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 131
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 132
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": 137
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            133
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        5770521,
+        "fixed",
+        20,
+        8,
+        "euler",
+        "simple",
         1
       ]
     },
-    "class_type": "Lora Loader Stack (rgthree)",
-    "_meta": {
-      "title": "Lora Loader Stack"
-    }
-  },
-  "39": {
-    "inputs": {
-      "output": "",
-      "source": [
-        "38",
-        0
-      ]
-    },
-    "class_type": "Display Any (rgthree)",
-    "_meta": {
-      "title": "Display Lora Stack"
-    }
-  },
-  "40": {
-    "inputs": {
-      "steps_total": 30,
-      "refiner_step": 24,
-      "cfg": 7,
-      "sampler_name": "euler",
-      "scheduler": "normal"
-    },
-    "class_type": "KSampler Config (rgthree)",
-    "_meta": {
-      "title": "KSampler Config"
-    }
-  },
-  "41": {
-    "inputs": {
-      "output": "",
-      "source": [
-        "40",
-        0
-      ]
-    },
-    "class_type": "Display Any (rgthree)",
-    "_meta": {
-      "title": "Display KSampler Config"
-    }
-  },
-  "42": {
-    "inputs": {
-      "prompt_g": "A surreal biomechanical illustration of \"electronic spaghetti.\" Wires and circuitry that mimic the shape of organic pasta and veins, twisting around brushed metal processors. The nodes look like metallic nerve endings. Cinematic lighting, intricate gold and chrome details, H.R. Giger style inspiration, sharp focus, trending on ArtStation.",
-      "prompt_l": "A surreal biomechanical illustration of \"electronic spaghetti.\" Wires and circuitry that mimic the shape of organic pasta and veins, twisting around brushed metal processors. The nodes look like metallic nerve endings. Cinematic lighting, intricate gold and chrome details, H.R. Giger style inspiration, sharp focus, trending on ArtStation.",
-      "insert_lora": "CHOOSE",
-      "insert_embedding": "CHOOSE",
-      "opt_model": [
-        "38",
-        0
+    {
+      "id": 42,
+      "type": "SDXL Power Prompt - Positive (rgthree)",
+      "pos": [
+        1057.1875091552733,
+        1430
       ],
-      "opt_clip": [
-        "38",
-        1
-      ]
-    },
-    "class_type": "SDXL Power Prompt - Positive (rgthree)",
-    "_meta": {
-      "title": "SDXL Power Prompt Positive"
-    }
-  },
-  "43": {
-    "inputs": {
-      "output": "",
-      "source": [
-        "42",
-        0
-      ]
-    },
-    "class_type": "Display Any (rgthree)",
-    "_meta": {
-      "title": "Display SDXL Positive"
-    }
-  },
-  "44": {
-    "inputs": {
-      "prompt": "A surreal biomechanical illustration of \"electronic spaghetti.\" Wires and circuitry that mimic the shape of organic pasta and veins, twisting around brushed metal processors. The nodes look like metallic nerve endings. Cinematic lighting, intricate gold and chrome details, H.R. Giger style inspiration, sharp focus, trending on ArtStation.",
-      "insert_lora": "CHOOSE",
-      "insert_embedding": "CHOOSE",
-      "opt_model": [
-        "42",
-        1
+      "size": [
+        400,
+        390
       ],
-      "opt_clip": [
-        "42",
-        2
-      ]
-    },
-    "class_type": "Power Prompt (rgthree)",
-    "_meta": {
-      "title": "Power Prompt"
-    }
-  },
-  "45": {
-    "inputs": {
-      "output": "",
-      "source": [
-        "44",
-        0
-      ]
-    },
-    "class_type": "Display Any (rgthree)",
-    "_meta": {
-      "title": "Display Power Prompt"
-    }
-  },
-  "46": {
-    "inputs": {
-      "ckpt_name": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors"
-    },
-    "class_type": "CheckpointLoaderSimple",
-    "_meta": {
-      "title": "Load Checkpoint"
-    }
-  },
-  "47": {
-    "inputs": {
-      "prompt_g": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
-      "prompt_l": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
-      "insert_embedding": "CHOOSE",
-      "opt_clip": [
-        "42",
-        2
-      ]
-    },
-    "class_type": "SDXL Power Prompt - Simple / Negative (rgthree)",
-    "_meta": {
-      "title": "SDXL Power Prompt - Simple / Negative (rgthree)"
-    }
-  },
-  "48": {
-    "inputs": {
-      "output": "",
-      "source": [
-        "47",
-        1
-      ]
-    },
-    "class_type": "Display Any (rgthree)",
-    "_meta": {
-      "title": "Display Any"
-    }
-  },
-  "54": {
-    "inputs": {
-      "seed": 437350850555993,
-      "steps": 20,
-      "cfg": 8,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 1,
-      "model": [
-        "46",
-        0
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "opt_model",
+          "shape": 7,
+          "type": "MODEL",
+          "link": 121
+        },
+        {
+          "dir": 3,
+          "name": "opt_clip",
+          "shape": 7,
+          "type": "CLIP",
+          "link": 122
+        },
+        {
+          "dir": 3,
+          "name": "opt_clip_width",
+          "shape": 7,
+          "type": "INT",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "opt_clip_height",
+          "shape": 7,
+          "type": "INT",
+          "link": null
+        }
       ],
-      "positive": [
-        "42",
-        0
+      "outputs": [
+        {
+          "dir": 4,
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            123,
+            130
+          ]
+        },
+        {
+          "dir": 4,
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            124
+          ]
+        },
+        {
+          "dir": 4,
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            125,
+            127
+          ]
+        },
+        {
+          "color_off": "#7F7",
+          "color_on": "#7F7",
+          "dir": 4,
+          "name": "TEXT_G",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "color_off": "#7F7",
+          "color_on": "#7F7",
+          "dir": 4,
+          "name": "TEXT_L",
+          "type": "STRING",
+          "links": null
+        }
       ],
-      "negative": [
-        "47",
-        0
-      ],
-      "latent_image": [
-        "57",
-        0
+      "title": "SDXL Power Prompt Positive",
+      "properties": {
+        "Node name for S&R": "SDXL Power Prompt - Positive (rgthree)",
+        "combos_filter": ""
+      },
+      "widgets_values": [
+        "large letters on the bottom \"Pyisolate\" - A hyper-realistic 3D macro architectural cutaway of a futuristic server interior, visualizing software isolation. A central, glowing platinum processor core labeled \"ComfyUI\" sits in the center. Surrounding it are independent, floating glass containment modules",
+        "large letters on the bottom \"Pyisolate\" - A hyper-realistic 3D macro architectural cutaway of a futuristic server interior, visualizing software isolation. A central, glowing platinum processor core labeled \"ComfyUI\" sits in the center. Surrounding it are independent, floating glass containment modules",
+        "CHOOSE",
+        "CHOOSE"
       ]
     },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "KSampler"
-    }
-  },
-  "55": {
-    "inputs": {
-      "text": ""
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "CLIP Text Encode (Prompt)"
-    }
-  },
-  "57": {
-    "inputs": {
-      "width": 1024,
-      "height": 1024,
-      "batch_size": 1
-    },
-    "class_type": "EmptyLatentImage",
-    "_meta": {
-      "title": "Empty Latent Image"
-    }
-  },
-  "58": {
-    "inputs": {
-      "samples": [
-        "54",
-        0
+    {
+      "id": 44,
+      "type": "Power Prompt (rgthree)",
+      "pos": [
+        1557.1875091552733,
+        598
       ],
-      "vae": [
-        "46",
-        2
+      "size": [
+        400,
+        220
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "opt_model",
+          "shape": 7,
+          "type": "MODEL",
+          "link": 124
+        },
+        {
+          "dir": 3,
+          "name": "opt_clip",
+          "shape": 7,
+          "type": "CLIP",
+          "link": 125
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            126
+          ]
+        },
+        {
+          "dir": 4,
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": null
+        },
+        {
+          "color_off": "#7F7",
+          "color_on": "#7F7",
+          "dir": 4,
+          "name": "TEXT",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "Power Prompt",
+      "properties": {
+        "Node name for S&R": "Power Prompt (rgthree)",
+        "combos_filter": ""
+      },
+      "widgets_values": [
+        "large letters on the bottom \"Pyisolate\" - A hyper-realistic 3D macro architectural cutaway of a futuristic server interior, visualizing software isolation. A central, glowing platinum processor core labeled \"ComfyUI\" sits in the center. Surrounding it are independent, floating glass containment modules",
+        "CHOOSE",
+        "CHOOSE"
       ]
     },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE Decode"
-    }
-  },
-  "60": {
-    "inputs": {
-      "rgthree_comparer": {
-        "images": [
+    {
+      "id": 60,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        3464.655793177493,
+        321.9568933780026
+      ],
+      "size": [
+        710.3496786204499,
+        426.2065568868362
+      ],
+      "flags": {},
+      "order": 48,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 135
+        },
+        {
+          "dir": 3,
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 136
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "comparer_mode": "Slide"
+      },
+      "widgets_values": [
+        [
           {
             "name": "A",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_uaipf_00001_.png&type=temp&subfolder=&rand=0.8255541683119423"
+            "url": "/api/view?filename=rgthree.compare._temp_ttydc_00015_.png&type=temp&subfolder=&rand=0.8458330737066441"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_uaipf_00002_.png&type=temp&subfolder=&rand=0.830485211513896"
+            "url": "/api/view?filename=rgthree.compare._temp_ttydc_00016_.png&type=temp&subfolder=&rand=0.1079619905937852"
           }
         ]
-      },
-      "image_a": [
-        "2",
-        0
-      ],
-      "image_b": [
-        "58",
-        0
       ]
     },
-    "class_type": "Image Comparer (rgthree)",
-    "_meta": {
-      "title": "Image Comparer (rgthree)"
+    {
+      "id": 29,
+      "type": "Image Inset Crop (rgthree)",
+      "pos": [
+        3005.7564942850745,
+        417.06901526444176
+      ],
+      "size": [
+        323.2875,
+        154
+      ],
+      "flags": {},
+      "order": 43,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 108
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "shape": 3,
+          "type": "IMAGE",
+          "links": [
+            109
+          ]
+        }
+      ],
+      "title": "Image Inset Crop",
+      "properties": {},
+      "widgets_values": [
+        "Pixels",
+        32,
+        0,
+        24,
+        8
+      ]
+    },
+    {
+      "id": 11,
+      "type": "Context (rgthree)",
+      "pos": [
+        616.9209536545644,
+        1539.5311308861646
+      ],
+      "size": [
+        231.03750000000002,
+        186
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "base_ctx",
+          "type": "RGTHREE_CONTEXT",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "model",
+          "type": "MODEL",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "clip",
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "vae",
+          "type": "VAE",
+          "link": 80
+        },
+        {
+          "dir": 3,
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "latent",
+          "type": "LATENT",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "images",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "seed",
+          "type": "INT",
+          "link": 81
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "name": "CONTEXT",
+          "shape": 3,
+          "type": "RGTHREE_CONTEXT",
+          "links": [
+            82,
+            87
+          ]
+        },
+        {
+          "dir": 4,
+          "name": "MODEL",
+          "shape": 3,
+          "type": "MODEL",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "CLIP",
+          "shape": 3,
+          "type": "CLIP",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "VAE",
+          "shape": 3,
+          "type": "VAE",
+          "links": [
+            78
+          ]
+        },
+        {
+          "dir": 4,
+          "name": "POSITIVE",
+          "shape": 3,
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "NEGATIVE",
+          "shape": 3,
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "LATENT",
+          "shape": 3,
+          "type": "LATENT",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "IMAGE",
+          "shape": 3,
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "dir": 4,
+          "name": "SEED",
+          "shape": 3,
+          "type": "INT",
+          "links": [
+            77,
+            79
+          ]
+        }
+      ],
+      "title": "Seeded Context",
+      "properties": {},
+      "widgets_values": []
+    },
+    {
+      "id": 34,
+      "type": "Power Puter (rgthree)",
+      "pos": [
+        600,
+        618
+      ],
+      "size": [
+        274.7624908447266,
+        156
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "*",
+          "link": 113
+        },
+        {
+          "name": "b",
+          "type": "*",
+          "link": 114
+        },
+        {
+          "name": "c",
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "INT",
+          "name": "*",
+          "shape": 3,
+          "type": "INT",
+          "links": [
+            115
+          ]
+        }
+      ],
+      "title": "Power Puter",
+      "properties": {},
+      "widgets_values": [
+        {
+          "outputs": [
+            "INT"
+          ]
+        },
+        "1+2+3+b"
+      ]
+    },
+    {
+      "id": 22,
+      "type": "Display Int (rgthree)",
+      "pos": [
+        1396.6523908891977,
+        535.7212950805609
+      ],
+      "size": [
+        171.29999389648438,
+        76.00000000000006
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "input",
+          "type": "INT",
+          "link": 96
+        }
+      ],
+      "outputs": [],
+      "title": "Display Big Context Seed",
+      "properties": {
+        "Node name for S&R": "Display Int (rgthree)"
+      },
+      "widgets_values": [
+        5770521
+      ]
+    },
+    {
+      "id": 4,
+      "type": "Seed (rgthree)",
+      "pos": [
+        100,
+        362
+      ],
+      "size": [
+        315,
+        130
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "dir": 4,
+          "name": "SEED",
+          "shape": 3,
+          "type": "INT",
+          "links": [
+            73,
+            94,
+            104
+          ]
+        }
+      ],
+      "title": "Generate Seed",
+      "properties": {
+        "randomMax": 1125899906842624,
+        "randomMin": 0
+      },
+      "widgets_values": [
+        5770521,
+        "",
+        "",
+        "okay"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "Seed (rgthree)",
+      "pos": [
+        100,
+        622
+      ],
+      "size": [
+        315,
+        130
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "dir": 4,
+          "name": "SEED",
+          "shape": 3,
+          "type": "INT",
+          "links": [
+            81,
+            105,
+            114
+          ]
+        }
+      ],
+      "title": "Generate Seed",
+      "properties": {
+        "randomMax": 1125899906842624,
+        "randomMin": 0
+      },
+      "widgets_values": [
+        -1,
+        "",
+        "",
+        "okay"
+      ]
+    },
+    {
+      "id": 27,
+      "type": "Any Switch (rgthree)",
+      "pos": [
+        1057.1875091552733,
+        286
+      ],
+      "size": [
+        264.7875,
+        106
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "any_01",
+          "type": "INT",
+          "link": 104
+        },
+        {
+          "dir": 3,
+          "name": "any_02",
+          "type": "INT",
+          "link": 105
+        },
+        {
+          "dir": 3,
+          "name": "any_03",
+          "type": "INT",
+          "link": 106
+        },
+        {
+          "dir": 3,
+          "name": "any_04",
+          "type": "INT",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "any_05",
+          "type": "INT",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "label": "INT",
+          "name": "*",
+          "shape": 3,
+          "type": "INT",
+          "links": [
+            107,
+            137
+          ]
+        }
+      ],
+      "title": "Any Switch",
+      "properties": {},
+      "widgets_values": []
     }
-  }
+  ],
+  "links": [
+    [
+      69,
+      19,
+      0,
+      2,
+      1,
+      "INT"
+    ],
+    [
+      70,
+      19,
+      1,
+      2,
+      2,
+      "INT"
+    ],
+    [
+      71,
+      58,
+      0,
+      2,
+      0,
+      "IMAGE"
+    ],
+    [
+      72,
+      2,
+      0,
+      3,
+      0,
+      "IMAGE"
+    ],
+    [
+      73,
+      4,
+      0,
+      5,
+      0,
+      "INT"
+    ],
+    [
+      74,
+      10,
+      3,
+      6,
+      3,
+      "VAE"
+    ],
+    [
+      75,
+      10,
+      8,
+      6,
+      8,
+      "INT"
+    ],
+    [
+      76,
+      6,
+      8,
+      7,
+      0,
+      "INT"
+    ],
+    [
+      77,
+      11,
+      8,
+      9,
+      0,
+      "INT"
+    ],
+    [
+      78,
+      11,
+      3,
+      10,
+      3,
+      "VAE"
+    ],
+    [
+      79,
+      11,
+      8,
+      10,
+      8,
+      "INT"
+    ],
+    [
+      80,
+      46,
+      2,
+      11,
+      3,
+      "VAE"
+    ],
+    [
+      81,
+      8,
+      0,
+      11,
+      8,
+      "INT"
+    ],
+    [
+      82,
+      11,
+      0,
+      12,
+      0,
+      "RGTHREE_CONTEXT"
+    ],
+    [
+      83,
+      10,
+      0,
+      12,
+      1,
+      "RGTHREE_CONTEXT"
+    ],
+    [
+      84,
+      6,
+      0,
+      12,
+      2,
+      "RGTHREE_CONTEXT"
+    ],
+    [
+      85,
+      12,
+      8,
+      13,
+      0,
+      "INT"
+    ],
+    [
+      86,
+      17,
+      0,
+      14,
+      0,
+      "RGTHREE_CONTEXT"
+    ],
+    [
+      87,
+      11,
+      0,
+      17,
+      0,
+      "RGTHREE_CONTEXT"
+    ],
+    [
+      88,
+      6,
+      0,
+      17,
+      1,
+      "RGTHREE_CONTEXT"
+    ],
+    [
+      89,
+      12,
+      0,
+      17,
+      2,
+      "RGTHREE_CONTEXT"
+    ],
+    [
+      90,
+      17,
+      8,
+      18,
+      0,
+      "INT"
+    ],
+    [
+      91,
+      1,
+      0,
+      19,
+      0,
+      [
+        "IMAGE",
+        "LATENT",
+        "MASK"
+      ]
+    ],
+    [
+      92,
+      19,
+      0,
+      20,
+      0,
+      "INT"
+    ],
+    [
+      93,
+      38,
+      1,
+      21,
+      2,
+      "CLIP"
+    ],
+    [
+      94,
+      4,
+      0,
+      21,
+      8,
+      "INT"
+    ],
+    [
+      95,
+      40,
+      2,
+      21,
+      11,
+      "FLOAT"
+    ],
+    [
+      96,
+      21,
+      8,
+      22,
+      0,
+      "INT"
+    ],
+    [
+      97,
+      6,
+      0,
+      23,
+      0,
+      "RGTHREE_CONTEXT"
+    ],
+    [
+      98,
+      10,
+      0,
+      23,
+      1,
+      "RGTHREE_CONTEXT"
+    ],
+    [
+      99,
+      21,
+      0,
+      23,
+      2,
+      "RGTHREE_CONTEXT"
+    ],
+    [
+      100,
+      23,
+      8,
+      24,
+      0,
+      "INT"
+    ],
+    [
+      101,
+      6,
+      0,
+      25,
+      0,
+      "RGTHREE_CONTEXT"
+    ],
+    [
+      102,
+      21,
+      0,
+      25,
+      1,
+      "RGTHREE_CONTEXT"
+    ],
+    [
+      103,
+      25,
+      8,
+      26,
+      0,
+      "INT"
+    ],
+    [
+      104,
+      4,
+      0,
+      27,
+      0,
+      "INT"
+    ],
+    [
+      105,
+      8,
+      0,
+      27,
+      1,
+      "INT"
+    ],
+    [
+      106,
+      19,
+      0,
+      27,
+      2,
+      "INT"
+    ],
+    [
+      107,
+      27,
+      0,
+      28,
+      0,
+      "*"
+    ],
+    [
+      108,
+      58,
+      0,
+      29,
+      0,
+      "IMAGE"
+    ],
+    [
+      109,
+      29,
+      0,
+      30,
+      0,
+      "IMAGE"
+    ],
+    [
+      110,
+      58,
+      0,
+      31,
+      0,
+      "IMAGE"
+    ],
+    [
+      111,
+      58,
+      0,
+      31,
+      1,
+      "IMAGE"
+    ],
+    [
+      112,
+      32,
+      0,
+      33,
+      0,
+      "INT"
+    ],
+    [
+      113,
+      32,
+      0,
+      34,
+      0,
+      "INT"
+    ],
+    [
+      114,
+      8,
+      0,
+      34,
+      1,
+      "INT"
+    ],
+    [
+      115,
+      34,
+      0,
+      35,
+      0,
+      "*"
+    ],
+    [
+      116,
+      36,
+      0,
+      37,
+      0,
+      "LATENT"
+    ],
+    [
+      117,
+      46,
+      0,
+      38,
+      0,
+      "MODEL"
+    ],
+    [
+      118,
+      46,
+      1,
+      38,
+      1,
+      "CLIP"
+    ],
+    [
+      119,
+      38,
+      0,
+      39,
+      0,
+      "MODEL"
+    ],
+    [
+      120,
+      40,
+      0,
+      41,
+      0,
+      "INT"
+    ],
+    [
+      121,
+      38,
+      0,
+      42,
+      0,
+      "MODEL"
+    ],
+    [
+      122,
+      38,
+      1,
+      42,
+      1,
+      "CLIP"
+    ],
+    [
+      123,
+      42,
+      0,
+      43,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      124,
+      42,
+      1,
+      44,
+      0,
+      "MODEL"
+    ],
+    [
+      125,
+      42,
+      2,
+      44,
+      1,
+      "CLIP"
+    ],
+    [
+      126,
+      44,
+      0,
+      45,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      127,
+      42,
+      2,
+      47,
+      0,
+      "CLIP"
+    ],
+    [
+      128,
+      47,
+      1,
+      48,
+      0,
+      "STRING"
+    ],
+    [
+      129,
+      46,
+      0,
+      54,
+      0,
+      "MODEL"
+    ],
+    [
+      130,
+      42,
+      0,
+      54,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      131,
+      47,
+      0,
+      54,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      132,
+      57,
+      0,
+      54,
+      3,
+      "LATENT"
+    ],
+    [
+      133,
+      54,
+      0,
+      58,
+      0,
+      "LATENT"
+    ],
+    [
+      134,
+      46,
+      2,
+      58,
+      1,
+      "VAE"
+    ],
+    [
+      135,
+      2,
+      0,
+      60,
+      0,
+      "IMAGE"
+    ],
+    [
+      136,
+      58,
+      0,
+      60,
+      1,
+      "IMAGE"
+    ],
+    [
+      137,
+      27,
+      0,
+      54,
+      4,
+      "INT"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.6115909044841468,
+      "offset": [
+        404.1431868981176,
+        254.20130422037255
+      ]
+    },
+    "frontendVersion": "1.42.8"
+  },
+  "version": 0.4
 }

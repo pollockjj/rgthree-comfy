@@ -1,0 +1,781 @@
+{
+  "1": {
+    "inputs": {
+      "image": "example.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Test Image"
+    }
+  },
+  "2": {
+    "inputs": {
+      "measurement": "Pixels",
+      "width": [
+        "19",
+        0
+      ],
+      "height": [
+        "19",
+        1
+      ],
+      "fit": "contain",
+      "method": "bicubic",
+      "image": [
+        "58",
+        0
+      ]
+    },
+    "class_type": "Image Resize (rgthree)",
+    "_meta": {
+      "title": "Resize via rgthree"
+    }
+  },
+  "3": {
+    "inputs": {
+      "filename_prefix": "rgthree_image_resize",
+      "images": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Resized Image"
+    }
+  },
+  "4": {
+    "inputs": {
+      "seed": 5770521
+    },
+    "class_type": "Seed (rgthree)",
+    "_meta": {
+      "title": "Generate Seed"
+    }
+  },
+  "5": {
+    "inputs": {
+      "output": "",
+      "input": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "Display Int (rgthree)",
+    "_meta": {
+      "title": "Display Seed"
+    }
+  },
+  "6": {
+    "inputs": {
+      "vae": [
+        "10",
+        3
+      ],
+      "seed": [
+        "10",
+        8
+      ]
+    },
+    "class_type": "Context (rgthree)",
+    "_meta": {
+      "title": "Create Context"
+    }
+  },
+  "7": {
+    "inputs": {
+      "output": "",
+      "input": [
+        "6",
+        8
+      ]
+    },
+    "class_type": "Display Int (rgthree)",
+    "_meta": {
+      "title": "Display Context Seed"
+    }
+  },
+  "8": {
+    "inputs": {
+      "seed": -1
+    },
+    "class_type": "Seed (rgthree)",
+    "_meta": {
+      "title": "Generate Seed"
+    }
+  },
+  "9": {
+    "inputs": {
+      "output": "",
+      "source": [
+        "11",
+        8
+      ]
+    },
+    "class_type": "Display Any (rgthree)",
+    "_meta": {
+      "title": "Display Any"
+    }
+  },
+  "10": {
+    "inputs": {
+      "vae": [
+        "11",
+        3
+      ],
+      "seed": [
+        "11",
+        8
+      ]
+    },
+    "class_type": "Context (rgthree)",
+    "_meta": {
+      "title": "Empty Context"
+    }
+  },
+  "11": {
+    "inputs": {
+      "vae": [
+        "46",
+        2
+      ],
+      "seed": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "Context (rgthree)",
+    "_meta": {
+      "title": "Seeded Context"
+    }
+  },
+  "12": {
+    "inputs": {
+      "ctx_01": [
+        "11",
+        0
+      ],
+      "ctx_02": [
+        "10",
+        0
+      ],
+      "ctx_03": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "Context Switch (rgthree)",
+    "_meta": {
+      "title": "Switch Context"
+    }
+  },
+  "13": {
+    "inputs": {
+      "output": "",
+      "input": [
+        "12",
+        8
+      ]
+    },
+    "class_type": "Display Int (rgthree)",
+    "_meta": {
+      "title": "Display Switched Seed"
+    }
+  },
+  "14": {
+    "inputs": {
+      "output": "",
+      "source": [
+        "17",
+        0
+      ]
+    },
+    "class_type": "Display Any (rgthree)",
+    "_meta": {
+      "title": "Display Any (rgthree)"
+    }
+  },
+  "17": {
+    "inputs": {
+      "ctx_01": [
+        "11",
+        0
+      ],
+      "ctx_02": [
+        "6",
+        0
+      ],
+      "ctx_03": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "Context Merge (rgthree)",
+    "_meta": {
+      "title": "Merge Contexts"
+    }
+  },
+  "18": {
+    "inputs": {
+      "output": "",
+      "input": [
+        "17",
+        8
+      ]
+    },
+    "class_type": "Display Int (rgthree)",
+    "_meta": {
+      "title": "Display Merged Seed"
+    }
+  },
+  "19": {
+    "inputs": {
+      "input": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "Image or Latent Size (rgthree)",
+    "_meta": {
+      "title": "Measure Size"
+    }
+  },
+  "20": {
+    "inputs": {
+      "output": "",
+      "input": [
+        "19",
+        0
+      ]
+    },
+    "class_type": "Display Int (rgthree)",
+    "_meta": {
+      "title": "Display Width"
+    }
+  },
+  "21": {
+    "inputs": {
+      "clip": [
+        "38",
+        1
+      ],
+      "seed": [
+        "4",
+        0
+      ],
+      "cfg": [
+        "40",
+        2
+      ]
+    },
+    "class_type": "Context Big (rgthree)",
+    "_meta": {
+      "title": "Big Context"
+    }
+  },
+  "22": {
+    "inputs": {
+      "output": "",
+      "input": [
+        "21",
+        8
+      ]
+    },
+    "class_type": "Display Int (rgthree)",
+    "_meta": {
+      "title": "Display Big Context Seed"
+    }
+  },
+  "23": {
+    "inputs": {
+      "ctx_01": [
+        "6",
+        0
+      ],
+      "ctx_02": [
+        "10",
+        0
+      ],
+      "ctx_03": [
+        "21",
+        0
+      ]
+    },
+    "class_type": "Context Switch Big (rgthree)",
+    "_meta": {
+      "title": "Big Context Switch"
+    }
+  },
+  "24": {
+    "inputs": {
+      "output": "",
+      "input": [
+        "23",
+        8
+      ]
+    },
+    "class_type": "Display Int (rgthree)",
+    "_meta": {
+      "title": "Display Big Switch Seed"
+    }
+  },
+  "25": {
+    "inputs": {
+      "ctx_01": [
+        "6",
+        0
+      ],
+      "ctx_02": [
+        "21",
+        0
+      ]
+    },
+    "class_type": "Context Merge Big (rgthree)",
+    "_meta": {
+      "title": "Big Context Merge"
+    }
+  },
+  "26": {
+    "inputs": {
+      "output": "",
+      "input": [
+        "25",
+        8
+      ]
+    },
+    "class_type": "Display Int (rgthree)",
+    "_meta": {
+      "title": "Display Big Merge Seed"
+    }
+  },
+  "27": {
+    "inputs": {
+      "any_01": [
+        "4",
+        0
+      ],
+      "any_02": [
+        "8",
+        0
+      ],
+      "any_03": [
+        "19",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Any Switch"
+    }
+  },
+  "28": {
+    "inputs": {
+      "output": "",
+      "source": [
+        "27",
+        0
+      ]
+    },
+    "class_type": "Display Any (rgthree)",
+    "_meta": {
+      "title": "Display Any Switch Output"
+    }
+  },
+  "29": {
+    "inputs": {
+      "measurement": "Pixels",
+      "left": 32,
+      "right": 0,
+      "top": 24,
+      "bottom": 8,
+      "image": [
+        "58",
+        0
+      ]
+    },
+    "class_type": "Image Inset Crop (rgthree)",
+    "_meta": {
+      "title": "Image Inset Crop"
+    }
+  },
+  "30": {
+    "inputs": {
+      "filename_prefix": "rgthree_inset_crop",
+      "images": [
+        "29",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Inset Crop"
+    }
+  },
+  "31": {
+    "inputs": {
+      "rgthree_comparer": {
+        "images": [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_gucym_00015_.png&type=temp&subfolder=&rand=0.41714313880986253"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_gucym_00016_.png&type=temp&subfolder=&rand=0.44082808202716883"
+          }
+        ]
+      },
+      "image_a": [
+        "58",
+        0
+      ],
+      "image_b": [
+        "58",
+        0
+      ]
+    },
+    "class_type": "Image Comparer (rgthree)",
+    "_meta": {
+      "title": "Image Comparer"
+    }
+  },
+  "32": {
+    "inputs": {
+      "type": "INT",
+      "value": 42
+    },
+    "class_type": "Power Primitive (rgthree)",
+    "_meta": {
+      "title": "Power Primitive"
+    }
+  },
+  "33": {
+    "inputs": {
+      "output": "",
+      "source": [
+        "32",
+        0
+      ]
+    },
+    "class_type": "Display Any (rgthree)",
+    "_meta": {
+      "title": "Display Power Primitive"
+    }
+  },
+  "34": {
+    "inputs": {
+      "outputs": {
+        "outputs": [
+          "INT"
+        ]
+      },
+      "code": "1+2+3+b",
+      "a": [
+        "32",
+        0
+      ],
+      "b": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "Power Puter (rgthree)",
+    "_meta": {
+      "title": "Power Puter"
+    }
+  },
+  "35": {
+    "inputs": {
+      "output": "",
+      "source": [
+        "34",
+        0
+      ]
+    },
+    "class_type": "Display Any (rgthree)",
+    "_meta": {
+      "title": "Display Power Puter Result"
+    }
+  },
+  "36": {
+    "inputs": {
+      "dimensions": "1024 x 1024  (square)",
+      "clip_scale": 2,
+      "batch_size": 1
+    },
+    "class_type": "SDXL Empty Latent Image (rgthree)",
+    "_meta": {
+      "title": "SDXL Empty Latent"
+    }
+  },
+  "37": {
+    "inputs": {
+      "output": "",
+      "source": [
+        "36",
+        0
+      ]
+    },
+    "class_type": "Display Any (rgthree)",
+    "_meta": {
+      "title": "Display SDXL Latent"
+    }
+  },
+  "38": {
+    "inputs": {
+      "lora_01": "None",
+      "strength_01": 1,
+      "lora_02": "None",
+      "strength_02": 1,
+      "lora_03": "None",
+      "strength_03": 1,
+      "lora_04": "None",
+      "strength_04": 1,
+      "model": [
+        "46",
+        0
+      ],
+      "clip": [
+        "46",
+        1
+      ]
+    },
+    "class_type": "Lora Loader Stack (rgthree)",
+    "_meta": {
+      "title": "Lora Loader Stack"
+    }
+  },
+  "39": {
+    "inputs": {
+      "output": "",
+      "source": [
+        "38",
+        0
+      ]
+    },
+    "class_type": "Display Any (rgthree)",
+    "_meta": {
+      "title": "Display Lora Stack"
+    }
+  },
+  "40": {
+    "inputs": {
+      "steps_total": 30,
+      "refiner_step": 24,
+      "cfg": 7,
+      "sampler_name": "euler",
+      "scheduler": "normal"
+    },
+    "class_type": "KSampler Config (rgthree)",
+    "_meta": {
+      "title": "KSampler Config"
+    }
+  },
+  "41": {
+    "inputs": {
+      "output": "",
+      "source": [
+        "40",
+        0
+      ]
+    },
+    "class_type": "Display Any (rgthree)",
+    "_meta": {
+      "title": "Display KSampler Config"
+    }
+  },
+  "42": {
+    "inputs": {
+      "prompt_g": "large letters on the bottom \"Pyisolate\" - A hyper-realistic 3D macro architectural cutaway of a futuristic server interior, visualizing software isolation. A central, glowing platinum processor core labeled \"ComfyUI\" sits in the center. Surrounding it are independent, floating glass containment modules",
+      "prompt_l": "large letters on the bottom \"Pyisolate\" - A hyper-realistic 3D macro architectural cutaway of a futuristic server interior, visualizing software isolation. A central, glowing platinum processor core labeled \"ComfyUI\" sits in the center. Surrounding it are independent, floating glass containment modules",
+      "insert_lora": "CHOOSE",
+      "insert_embedding": "CHOOSE",
+      "opt_model": [
+        "38",
+        0
+      ],
+      "opt_clip": [
+        "38",
+        1
+      ]
+    },
+    "class_type": "SDXL Power Prompt - Positive (rgthree)",
+    "_meta": {
+      "title": "SDXL Power Prompt Positive"
+    }
+  },
+  "43": {
+    "inputs": {
+      "output": "",
+      "source": [
+        "42",
+        0
+      ]
+    },
+    "class_type": "Display Any (rgthree)",
+    "_meta": {
+      "title": "Display SDXL Positive"
+    }
+  },
+  "44": {
+    "inputs": {
+      "prompt": "large letters on the bottom \"Pyisolate\" - A hyper-realistic 3D macro architectural cutaway of a futuristic server interior, visualizing software isolation. A central, glowing platinum processor core labeled \"ComfyUI\" sits in the center. Surrounding it are independent, floating glass containment modules",
+      "insert_lora": "CHOOSE",
+      "insert_embedding": "CHOOSE",
+      "opt_model": [
+        "42",
+        1
+      ],
+      "opt_clip": [
+        "42",
+        2
+      ]
+    },
+    "class_type": "Power Prompt (rgthree)",
+    "_meta": {
+      "title": "Power Prompt"
+    }
+  },
+  "45": {
+    "inputs": {
+      "output": "",
+      "source": [
+        "44",
+        0
+      ]
+    },
+    "class_type": "Display Any (rgthree)",
+    "_meta": {
+      "title": "Display Power Prompt"
+    }
+  },
+  "46": {
+    "inputs": {
+      "ckpt_name": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "47": {
+    "inputs": {
+      "prompt_g": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "prompt_l": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+      "insert_embedding": "CHOOSE",
+      "opt_clip": [
+        "42",
+        2
+      ]
+    },
+    "class_type": "SDXL Power Prompt - Simple / Negative (rgthree)",
+    "_meta": {
+      "title": "SDXL Power Prompt - Simple / Negative (rgthree)"
+    }
+  },
+  "48": {
+    "inputs": {
+      "output": "",
+      "source": [
+        "47",
+        1
+      ]
+    },
+    "class_type": "Display Any (rgthree)",
+    "_meta": {
+      "title": "Display Any"
+    }
+  },
+  "54": {
+    "inputs": {
+      "seed": [
+        "27",
+        0
+      ],
+      "steps": 20,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1,
+      "model": [
+        "46",
+        0
+      ],
+      "positive": [
+        "42",
+        0
+      ],
+      "negative": [
+        "47",
+        0
+      ],
+      "latent_image": [
+        "57",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "57": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
+    }
+  },
+  "58": {
+    "inputs": {
+      "samples": [
+        "54",
+        0
+      ],
+      "vae": [
+        "46",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "60": {
+    "inputs": {
+      "rgthree_comparer": {
+        "images": [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_ttydc_00015_.png&type=temp&subfolder=&rand=0.8458330737066441"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_ttydc_00016_.png&type=temp&subfolder=&rand=0.1079619905937852"
+          }
+        ]
+      },
+      "image_a": [
+        "2",
+        0
+      ],
+      "image_b": [
+        "58",
+        0
+      ]
+    },
+    "class_type": "Image Comparer (rgthree)",
+    "_meta": {
+      "title": "Image Comparer (rgthree)"
+    }
+  }
+}
